@@ -8,8 +8,6 @@ import json
 
 app = FastAPI()
 
-OPENAI_API_KEY = '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'
-
 
 
 # Set allowed origins
