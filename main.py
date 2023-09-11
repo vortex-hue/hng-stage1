@@ -12,10 +12,8 @@ app = FastAPI()
 
 # Set allowed origins
 origins = [
-    "http://localhost:5173",
-    "http://localhost",
     "https://stage1.up.railway.app",
-    '*'
+    '*',
 ]
 
 # Enable CORS
@@ -32,7 +30,7 @@ app.add_middleware(
 
 
 
-@app.post("/stage1/")
+@app.get("/stage1/")
 def stage1():
     async def get_info( slack_name: str = Query(..., description="Slack name"), track: str = Query(..., description="Track"),):
         
